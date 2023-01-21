@@ -682,7 +682,7 @@ header
 .work-septik-left__ul
     display: flex
     flex-wrap: wrap
-    flex-direction: column
+    flex-direction: row
     justify-content: space-between
     -webkit-box-pack: justify
     line-height: 1.5
@@ -691,7 +691,8 @@ header
 
 
 .work-septik-left__item
-    width: 96%
+    width: 50%
+    height: 600px
     margin-bottom: 40px
     font-size: 18px
     line-height: 24px
@@ -704,8 +705,10 @@ header
     color: aliceblue
     text-align: justify 
     display: flex
-    justify-content: space-between
-    border: 2px solid blue
+    flex-direction: column
+    // justify-content: space-between
+    align-items: center
+    // border: 2px solid blue
 
 .work-septik-left__item:hover
     text-shadow: 0px 0px 10px #2600ad
@@ -721,7 +724,8 @@ header
     font-size: 18px
     color: #fff
     position: relative
-    width: 30% 
+    width: 90% 
+    text-align: justify
 
 .work-septik-left__number span
     margin-bottom: 20px
@@ -735,7 +739,8 @@ header
 .work-septik-right
     width: 45%
     display: flex
-    align-items: center
+    // align-items: center
+    padding-top: 100px
 
 .work-septik-right-form
     width: 60%
@@ -748,11 +753,14 @@ header
     flex-direction: column
     justify-content: center
     align-items: center
-.work-septik-right-form__name
-    font-size: 26px
+
+#form-quest
+    font-size: 27px
     font-weight: 700
     word-spacing: 2px
     padding-bottom: 50px
+    text-align: center
+    padding-left: 100px
 
 .work-septik-right-form__content p
     padding-bottom: 30px
@@ -790,30 +798,35 @@ header
     cursor: pointer
     margin: 50px 0px 0px 0px
 
-// .work-septik-left__content
-//     display: flex
-//     flex-wrap: no wrap
-
-// .work-septik-left__img > .work-septik-left__ul
-//     display: flex
-//     flex-direction: column
-//     align-items: center
-//     justify-content: space-between
-// .work-septik-left__img
-//     width: 60%
-
-// .work-septik-left__img img
-//     width: 400px
-//     height: 300px
-//     margin-bottom: 20px
-//     opacity: 0.2
-
 .work-septik-left__two img
-    opacity: 0.2
+    opacity: 0.8
     width: 400px
     height: 300px
 
-.one:hover ~ .work-septik-left__two > img, .two:hover ~ .work-septik-left__two img, .three:hover ~ .work-septik-left__two img, .four:hover ~ .work-septik-left__two img
-    opacity: 1
-    transition: all 0.5s linear 
+.work-septik-right-form__img
+    display: flex
+.work-septik-right-form__img img
+    width: 200px
+    margin: 0 auto
 
+
+.quest-block
+    width: 100%
+
+.question-content__quest
+    width: 80%
+    margin: 0 auto
+
+.quest-name, .quest-text
+    color: black
+
+.quest-name
+    cursor: pointer
+    position: relative
+    padding: 35px 85px 35px 96px
+    font-size: 16px
+    font-weight: 700
+    line-height: 20px
+
+
+    
