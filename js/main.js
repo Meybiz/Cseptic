@@ -88,6 +88,60 @@ for (i = 0; i < faq.length; i++) {
         }
     });
 }
+
+let modalButton = document.querySelector('.pulse-button');
+let popup = document.createElement('div');
+popup.classList.add('popup')
+popup.innerHTML = 'Окно';
+popup.style.display = 'none';
+document.body.appendChild(popup);
+modalButton.addEventListener('click', function() {
+  if (popup.style.display == 'none') {
+    popup.style.display = 'block';
+  } else {
+    popup.style.display = 'none';
+  }
+});
+
+let closeButton = document.createElement('button');
+closeButton.classList.add('closeBtn');
+closeButton.innerHTML = 'Закрыть окно';
+popup.appendChild(closeButton);
+closeButton.addEventListener('click', function() {
+  popup.style.display = 'none';
+
+});
+
+let one = document.querySelector('.popup')
+const timer = document.createElement('div');
+timer.classList.add('popup-content')
+timer.innerHTML = '25:00';
+one.appendChild(timer)
+
+document.body.appendChild(timer);
+let timerId = setInterval(function() {
+  let time = timer.innerHTML.split(':');
+  let minutes = time[0];
+  let seconds = checkSecond((time[1] - 1));
+  if (seconds == 59) {
+    minutes = minutes - 1
+  }
+  if (minutes < 0) {
+    clearInterval(timerId);
+    timer.innerHTML = "Buzz Buzz";
+  } else {
+    timer.innerHTML = minutes + ":" + seconds;
+  }
+}, 1000);
+function checkSecond(sec) {
+  if (sec < 10 && sec >= 0) {
+    sec = "0" + sec
+  }; // add zero in front of numbers < 10
+  if (sec < 0) {
+    sec = "59"
+  };
+  return sec;
+}
                 // buttons.forEach(button => {
                 //   button.addEventListener('click', () => {
                 //     document.querySelector('.s.active').classList.remove('active');

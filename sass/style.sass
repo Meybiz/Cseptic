@@ -21,6 +21,7 @@ header
 .one-div
     background: url(/img/back.png) center / cover
     height: 100vh
+    position: relative
 
 .header-foo
     display: flex
@@ -829,4 +830,276 @@ header
     line-height: 20px
 
 
-    
+.footer-content 
+    width: 100%
+    // border: 2px solid red
+    background: rgb(26, 127, 0)
+    padding: 20px
+
+.foo-container 
+    width: 80%
+    // border: 2px solid blue
+    margin: 0 auto
+    display: flex
+    justify-content: space-around
+
+.foo-container li
+    list-style-type: none
+
+.foo-container li p
+    color: aliceblue
+
+.ff
+    // border: 2px solid green
+    width: 25%
+    color: black
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+
+.ff p, .ff a, .ff li p > strong
+    color: aliceblue
+    font-size: 13px
+
+// .modalbtn
+//     width: 70px
+//     height: 70px
+//     border-radius: 35px
+//     border: none
+//     overflow: hidden
+//     position: relative
+//     cursor: pointer
+//     // margin-left: 200px 
+
+// .modal
+//     position: fixed
+//     right: 3%
+//     bottom: 4%
+// .modalbtn img
+//     display: flex
+//     flex-wrap: wrap
+//     align-items: center
+//     justify-content: center
+//     width: 80px
+//     height: 80px
+//     border-radius: 40px
+//     padding: 10px
+//     border: none
+//     background: #ff0000
+//     box-shadow: 0 5px 35px rgba(0, 0, 0, 0.2)
+//     position: fixed
+//     bottom: 50px
+//     right: 50px
+//     cursor: pointer
+//     outline: none
+//     z-index: 1000
+
+// .modalbtn .pulse__icon
+//     display: block
+//     width: 80px
+//     height: 80px
+//     background: url("../img/w512h5121380376664MetroUIPhoneAlt.png") center center/cover no-repeat
+//     transition: .3s
+
+// .modalbtn:hover .pulse__icon
+//     opacity: 0
+//     visibility: hidden
+//     position: absolute
+//     transition: .3s
+
+// .modalbtn .pulse__ring
+//     border: 1px solid #ff0000
+//     position: absolute
+//     top: 0
+//     left: 0
+//     bottom: 0
+//     right: 0
+//     height: auto
+//     width: auto
+//     border-radius: 50%
+//     animation-duration: 2.0s
+//     animation-name: pulse_1
+//     animation-iteration-count: infinite
+//     z-index: -1
+
+// .modalbtn .pulse__ring:nth-child(2)
+//     animation-name: pulse_2
+
+// .modalbtn .pulse__ring:nth-child(3)
+//     animation-name: pulse_3
+
+// @keyframes pulse_1 
+//   from 
+//     opacity: 1
+//     transform: scale(0.9, 0.9)
+  
+ 
+//   to 
+//     opacity: 0
+//     transform: scale(1.3, 1.3)
+  
+
+ 
+// @keyframes pulse_2 
+//   from 
+//     opacity: 1
+//     transform: scale(0.8, 0.8)
+  
+ 
+//   to 
+//     opacity: 0
+//     transform: scale(1.5, 1.5)
+  
+
+ 
+// @keyframes pulse_3 
+//   from 
+//     opacity: 1
+//     transform: scale(0.8, 0.8)
+  
+ 
+//   to 
+//     opacity: 0
+//     transform: scale(1.7, 1.7)
+  
+
+.pulse-button 
+  display: flex
+  flex-wrap: wrap
+  align-items: center
+  justify-content: center
+  width: 80px
+  height: 80px
+  border-radius: 40px
+  padding: 10px
+  border: none
+  background: rgb(26, 127, 0)
+  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.2)
+  position: fixed
+  bottom: 50px
+  right: 50px
+  cursor: pointer
+  outline: none
+  z-index: 1000
+
+
+.pulse-button__icon 
+  display: block
+  width: 40px
+  height: 40px
+  background: url("../img/12345.png") center center/cover no-repeat
+  transition: .3s
+
+
+.pulse-button__text 
+  display: block
+  width: 100%
+  height: 30px
+  font: 12px 'Open Sans', sans-serif
+  color: #fff
+  text-align: center
+  line-height: 1.2
+  opacity: 0
+  visibility: hidden
+  position: absolute
+  transition: .3s
+  margin-top: 1px
+
+
+.pulse-button:hover .pulse-button__icon 
+  opacity: 0
+  visibility: hidden
+  position: absolute
+  transition: .3s
+
+ 
+.pulse-button:hover .pulse-button__text 
+  transition: .3s
+  opacity: 1
+  visibility: visible
+  position: relative
+
+
+.pulse-button__rings 
+  border: 1px solid #ff0000
+  position: absolute
+  top: 0
+  left: 0
+  bottom: 0
+  right: 0
+  height: auto
+  width: auto
+  border-radius: 50%
+  animation-duration: 2.0s
+  animation-name: pulse_1
+  animation-iteration-count: infinite
+  z-index: -1
+
+ 
+.pulse-button__rings:nth-child(2) 
+  animation-name: pulse_2
+
+ 
+.pulse-button__rings:nth-child(3) 
+  animation-name: pulse_3
+
+
+@keyframes pulse_1 
+  from 
+    opacity: 1
+    transform: scale(0.9, 0.9)
+  
+ 
+  to 
+    opacity: 0
+    transform: scale(1.3, 1.3)
+  
+
+ 
+@keyframes pulse_2 
+  from 
+    opacity: 1
+    transform: scale(0.8, 0.8)
+  
+ 
+  to 
+    opacity: 0
+    transform: scale(1.5, 1.5)
+  
+
+ 
+@keyframes pulse_3 
+  from 
+    opacity: 1
+    transform: scale(0.8, 0.8)
+  
+ 
+  to 
+    opacity: 0
+    transform: scale(1.7, 1.7)
+  
+
+
+.popup
+    position: fixed
+    width: 300px
+    height: 100vh
+    border: 2px solid red
+    top: 0
+    right: 0px
+    z-index: 1000
+    transition: all 0.4s
+    transform: translateX(150%)
+    animation: ani 1s forwards
+
+@keyframes ani
+    0%
+        transform: translate(150%)
+    100%
+        transform: translate(0)
+
+
+
+
+
