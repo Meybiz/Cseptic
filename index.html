@@ -13,7 +13,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,600;0,700;0,800;1,200;1,400;1,600;1,700;1,800&display=swap"
         rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <!-- <script src="./js/main.js"></script> -->
 </head>
 
@@ -21,14 +21,14 @@
     <div class="one-div">
         <!-- <div class="modal"><button class="modalbtn"><span class="pulse__icon"></span><span class="pulse__text"></span><span class="pulse__ring"></span><span class="pulse__ring"></span><span class="pulse__ring"></span></button></div> -->
         <button class="pulse-button">
- 
+
             <span class="pulse-button__icon"></span>
             <!-- <span class="pulse-button__text"></span> -->
-         
+
             <span class="pulse-button__rings"></span>
             <span class="pulse-button__rings"></span>
             <span class="pulse-button__rings"></span>
-         
+
         </button>
         <div class="child">
             <header>
@@ -50,7 +50,25 @@
                         <p>+7 (499) 705-20-82</p>
                     </div>
                     <div class="header-foo__btn">
-                        <button>Заказать звонок</button>
+                        <button id="zakaz">Заказать звонок</button>
+                    </div>
+                </div>
+                <div class="modal-form">
+                    <div class="popup-content">
+                        <!-- <span class="close">&times;</span> -->
+                        <div class="modal-div imgdiv"><img src="./img/logomodal-PhotoRoom.png-PhotoRoom.png" alt="##"></div>
+                        <div class="modal-div">
+                            <h5>Оставьте телефон и наши специалисты проконсультируют Вас!</h5>
+                        </div>
+                        <form id="my-form" action="https://formspree.io/f/mpzeqpov" method="POST">
+                            <div class="modal-div"><input type="text" placeholder="Ваше имя..." name="name" required></div>
+                            <div class="modal-div"><input type="tel" placeholder="Ваш телефон..." name="phone" required></div>
+                            <div class="modal-div"><button type="submit">Позвоните мне</button></div>
+                            <p id="my-form-status"></p>
+                        </form>
+                        <div class="modal-div">
+                            <p>Нажимая кнопку "Позвоните мне" вы соглашаетесь на обработку персональных данных.</p>
+                        </div>
                     </div>
                 </div>
                 <!-- <div class="header-nav">
@@ -63,7 +81,7 @@
                     <a href="javascript:void(0)">Lorem ipsum</a>
                     <a href="javascript:void(0)">+7 (499) 705-20-82</a>
                     <p>Круглосуточно</p>
-                </div> -->
+                </div>
                 <div class="menu-trigger">
                     <div class="bars"><span></span><span></span><span></span></div>
                     <p>МЕНЮ</p>
@@ -87,7 +105,7 @@
                         </ul>
                         <p><b>+7 (499) 705-20-82</b></p>
                         <p>Бесплатный звонок</p>
-                    </div>
+                    </div> -->
             </header>
             <div class="one-div-content">
                 <div class="one-div-content__default">
@@ -166,28 +184,33 @@
                         <p>Бытовые стоки через входную канализационную трубу поступают в приёмный резервуар,
                             где происходит грубая механическая фильтрация, осаждение твёрдых частиц и дробление
                             органических остатков на мелкие фракции</p>
+                            <div class="lf-img"><img src="./img/copy-1-PhotoRoom.png-PhotoRoom.png" alt="##"></div>
                     </div>
                     <div class="lf2">
                         <p>На этой стадии в специальном резервуаре, который называют аэротенк,
                             происходит бактериальная очистка органики под действием активного ила. Аэробные бактерии
                             разлагают сточные воды
                             до минерального осадка, газов и воды</p>
+                            <div class="lf-img"><img src="./img/copy-2-PhotoRoom.png-PhotoRoom.png" alt="##"></div>
                     </div>
                     <div class="lf3">
                         <p>На этой стадии в третьем резервуаре происходит осаждение переработанных
                             органических частиц с целью разделения воды и осадка. Непроработанная жировая пленка на
                             поверхности возвращается в аэротэнк.</p>
+                            <div class="lf-img"><img src="./img/copy-3-PhotoRoom.png-PhotoRoom.png" alt="##"></div>
                     </div>
                     <div class="lf4">
                         <p>После разделения со взвешенными частицами очищенная вода накапливается
                             в четвертом резервуаре, доочищается от взвешенных частиц методом гравитации и выводится
                             самотеком или насосом во внешнюю среду:
                             в дренажный колодец, в ливневую канаву или используется для полива</p>
+                            <div class="lf-img"><img src="./img/copy-3-PhotoRoom.png-PhotoRoom.png" alt="##"></div>
                     </div>
                     <div class="lf5">
                         <p>После прохождения через септик станциях степень
                             очистки стоков составляет 98%. Очищенная вода, вытекающая из станции абсолютно прозрачна и
                             не имеет никакого запаха.</p>
+                            <div class="lf-img"><img src="./img/copy-4-PhotoRoom.png-PhotoRoom.png" alt="##"></div>
                     </div>
                 </div>
             </div>
@@ -315,9 +338,12 @@
                     <h1 class="faq-page">Зачем устанавливать автономную канализацию (септик)?</h1>
                     <!-- faq answer -->
                     <div class="faq-body">
-                        <p>В местах, где нет доступа к центральным канализационным сетям, обязательна я установка системы
-                            автономной канализации. По законодательству РФ сброс сточных вод на открытый грунт запрещен и
-                            преследуется по закону. Установите систему канализации, которая не загрязняет почву, не источает
+                        <p>В местах, где нет доступа к центральным канализационным сетям, обязательна я установка
+                            системы
+                            автономной канализации. По законодательству РФ сброс сточных вод на открытый грунт запрещен
+                            и
+                            преследуется по закону. Установите систему канализации, которая не загрязняет почву, не
+                            источает
                             запаха и соответствует всем стандартам СанПин, тогда не будет проблем ни с соседями, ни с
                             проверяющими органами. Лучшее решение поможет подобрать наш инженер.</p>
                     </div>
@@ -328,8 +354,10 @@
                     <h1 class="faq-page">Во сколько обойдется установка септика?</h1>
                     <!-- faq answer -->
                     <div class="faq-body">
-                        <p>Наша компания подберет для вас оптимальное решение и предложит 3 различных варианта для вашего
-                            загородного участка. Стоимость септика для дома, в котором проживают до 5 человек, колеблется от
+                        <p>Наша компания подберет для вас оптимальное решение и предложит 3 различных варианта для
+                            вашего
+                            загородного участка. Стоимость септика для дома, в котором проживают до 5 человек,
+                            колеблется от
                             55 000 рублей до 200 000 рублей (в зависимости от заявленных требований). Кроме того, у нас
                             постоянно проходят различные акции.</p>
                     </div>
@@ -337,7 +365,7 @@
                 <hr class="hr-line">
                 <div class="faq-three">
                     <!-- faq question -->
-    <h1 class="faq-page">Сколько электричества потребляет септик?</h1>
+                    <h1 class="faq-page">Сколько электричества потребляет септик?</h1>
                     <!-- faq answer -->
                     <div class="faq-body">
                         <p>Современная энергозависимая система автономной канализации для бытовых нужд потребляет совсем
@@ -346,7 +374,7 @@
                 </div>
                 <div class="faq-four">
                     <!-- faq question -->
-    <h1 class="faq-page">Какие бактерии нужны для септика?</h1>
+                    <h1 class="faq-page">Какие бактерии нужны для септика?</h1>
                     <!-- faq answer -->
                     <div class="faq-body">
                         <p>В станции глубокой биологической очистки, такие, например, как Топас или Аквалос, добавлять
@@ -356,18 +384,20 @@
                 </div>
                 <div class="faq-five">
                     <!-- faq question -->
-    <h1 class="faq-page">Есть неприятный запах при работе септика?</h1>
+                    <h1 class="faq-page">Есть неприятный запах при работе септика?</h1>
                     <!-- faq answer -->
                     <div class="faq-body">
-                        <p>При работе современных станций глубокой биологической очистки неприятного запаха не возникает.!</p>
+                        <p>При работе современных станций глубокой биологической очистки неприятного запаха не
+                            возникает.!</p>
                     </div>
                 </div>
                 <div class="faq-six">
                     <!-- faq question -->
-    <h1 class="faq-page">Какую воду можно сливать в септик?</h1>
+                    <h1 class="faq-page">Какую воду можно сливать в септик?</h1>
                     <!-- faq answer -->
                     <div class="faq-body">
-                        <p>В септики, которые устанавливает наша компания, можно сливать любые хозяйственно-бытовые стоки,
+                        <p>В септики, которые устанавливает наша компания, можно сливать любые хозяйственно-бытовые
+                            стоки,
                             в том числе: канализационные стоки, вода из-под ванны, душа, раковины, стиральной машины,
                             посудомоечной машины и бани. Не желательно попадание: горюче-смазочных и лакокрасочных
                             материалов (бензин, керосин, ацетон, краска).</p>
@@ -375,11 +405,12 @@
                 </div>
                 <div class="faq-seven">
                     <!-- faq question -->
-    <h1 class="faq-page">Как заказать и оплатить?</h1>
+                    <h1 class="faq-page">Как заказать и оплатить?</h1>
                     <!-- faq answer -->
                     <div class="faq-body">
                         <p>Позвоните по телефону <a href="">8 8888888888</a>, или оставьте заявку на
-                            сайте, и первый освободившийся специалист свяжется с вами. Мы используем различные формы оплаты,
+                            сайте, и первый освободившийся специалист свяжется с вами. Мы используем различные формы
+                            оплаты,
                             в т.ч. наличные и безналичные платежи, банковские карты и др.</p>
                     </div>
                 </div>
@@ -535,7 +566,8 @@
                         <p>Comfort Septic, Inc.</p>
                     </li>
                     <li>
-                        <p>Подбор и установка только надежных производителей для обеспечения комфортной жизни в ваших загородных домах и дач</p>
+                        <p>Подбор и установка только надежных производителей для обеспечения комфортной жизни в ваших
+                            загородных домах и дач</p>
                     </li>
                 </ul>
             </div>
@@ -549,10 +581,11 @@
                     </li>
                     <li>
                         <p><strong>Телефон:</strong> <a href="tel:+74997052082">+7(499)-705-20-82</a></p>
-                        
+
                     </li>
                     <li>
-                        <p><strong>Адрес производства:</strong> г.о. Ступино, р.п. Михнево, ул. Ленина, д. 15, офис 14</p>
+                        <p><strong>Адрес производства:</strong> г.о. Ступино, р.п. Михнево, ул. Ленина, д. 15, офис 14
+                        </p>
                     </li>
                 </ul>
             </div>
@@ -565,13 +598,29 @@
             </div> -->
         </div>
     </div>
-    <script
-    src="https://code.jquery.com/jquery-3.6.3.min.js"
-    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
-    crossorigin="anonymous"></script>
+    <div class="popup">
+        <div class="popup-content">
+            <div class="modal-div imgdiv"><img src="./img/logomodal-PhotoRoom.png-PhotoRoom.png" alt="##"></div>
+            <div class="modal-div">
+                <h5>Закажите обратный звонок и мы перезвоним Вам за минуту!</h5>
+            </div>
+            <form id="my-form" action="https://formspree.io/f/mpzeqpov" method="POST">
+                <div class="modal-div"><input type="text" placeholder="Ваше имя..." name="name"></div>
+                <div class="modal-div"><input type="tel" placeholder="Ваш телефон..." name="phone"></div>
+                <div class="modal-div"><button type="submit">Позвоните мне</button></div>
+                
+            </form>
+            <div class="modal-div">
+                <p>Нажимая кнопку "Позвоните мне" вы соглашаетесь на обработку персональных данных.</p>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
     <script src="./js/main.js">
     </script>
     
+
 </body>
 
 </html>

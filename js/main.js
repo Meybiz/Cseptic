@@ -78,7 +78,7 @@ for (i = 0; i < faq.length; i++) {
     faq[i].addEventListener("click", function () {
         /* Toggle between adding and removing the "active" class,
         to highlight the button that controls the panel */
-        this.classList.toggle("active");
+        this.classList.toggle("actives");
         /* Toggle between hiding and showing the active panel */
         var body = this.nextElementSibling;
         if (body.style.display === "block") {
@@ -90,58 +90,107 @@ for (i = 0; i < faq.length; i++) {
 }
 
 let modalButton = document.querySelector('.pulse-button');
-let popup = document.createElement('div');
-popup.classList.add('popup')
-popup.innerHTML = 'Окно';
+let popup = document.querySelector('.popup');
+// popup.classList.add('popup')
+// popup.innerHTML = 'Окно';
 popup.style.display = 'none';
 document.body.appendChild(popup);
-modalButton.addEventListener('click', function() {
-  if (popup.style.display == 'none') {
-    popup.style.display = 'block';
-  } else {
-    popup.style.display = 'none';
-  }
+modalButton.addEventListener('click', function () {
+    if (popup.style.display == 'none') {
+        popup.style.display = 'block';
+    } else {
+        popup.style.display = 'none';
+    }
 });
 
 let closeButton = document.createElement('button');
 closeButton.classList.add('closeBtn');
-closeButton.innerHTML = 'Закрыть окно';
+closeButton.innerHTML = 'Закрыть ×';
 popup.appendChild(closeButton);
-closeButton.addEventListener('click', function() {
-  popup.style.display = 'none';
+closeButton.addEventListener('click', function () {
+    popup.style.display = 'none';
 
 });
 
-let one = document.querySelector('.popup')
-const timer = document.createElement('div');
-timer.classList.add('popup-content')
-timer.innerHTML = '25:00';
-one.appendChild(timer)
 
-document.body.appendChild(timer);
-let timerId = setInterval(function() {
-  let time = timer.innerHTML.split(':');
-  let minutes = time[0];
-  let seconds = checkSecond((time[1] - 1));
-  if (seconds == 59) {
-    minutes = minutes - 1
-  }
-  if (minutes < 0) {
-    clearInterval(timerId);
-    timer.innerHTML = "Buzz Buzz";
-  } else {
-    timer.innerHTML = minutes + ":" + seconds;
-  }
-}, 1000);
-function checkSecond(sec) {
-  if (sec < 10 && sec >= 0) {
-    sec = "0" + sec
-  }; // add zero in front of numbers < 10
-  if (sec < 0) {
-    sec = "59"
-  };
-  return sec;
+let modal = document.querySelector('.modal-form');
+let mdBtn = document.getElementById('zakaz');
+// let span = document.querySelector('.close');
+
+mdBtn.onclick = function () {
+    modal.style.display = "block";
 }
+
+// span.onclick = function() {
+//     modal.style.display = "none";
+// }
+
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+var form = document.getElementById("my-form");
+
+async function handleSubmit(event) {
+    event.preventDefault();
+    var status = document.getElementById("my-form-status");
+    var data = new FormData(event.target);
+    fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+    }).then(response => {
+        if (response.ok) {
+            status.innerHTML = "Спасибо за заявку! Мы перезвоним в течении 1 минуты.";
+            form.reset()
+        } else {
+            response.json().then(data => {
+                if (Object.hasOwn(data, 'errors')) {
+                    status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+                } else {
+                    status.innerHTML = "Проверьте правильность введеных Вам данных!"
+                }
+            })
+        }
+    }).catch(error => {
+        status.innerHTML = "Oops! There was a problem submitting your form"
+    });
+}
+form.addEventListener("submit", handleSubmit)
+// let one = document.querySelector('.popup')
+// const timer = document.querySelector('.popup-conten');
+// timer.classList.add('popup-content')
+// timer.innerHTML = '25:00';
+// one.appendChild(timer)
+
+// document.body.appendChild(timer);
+// let timerId = setInterval(function() {
+//   let time = timer.innerHTML.split(':');
+//   let minutes = time[0];
+//   let seconds = checkSecond((time[1] - 1));
+//   if (seconds == 59) {
+//     minutes = minutes - 1
+//   }
+//   if (minutes < 0) {
+//     clearInterval(timerId);
+//     timer.innerHTML = "Buzz Buzz";
+//   } else {
+//     timer.innerHTML = minutes + ":" + seconds;
+//   }
+// }, 1000);
+// function checkSecond(sec) {
+//   if (sec < 10 && sec >= 0) {
+//     sec = "0" + sec
+//   }; // add zero in front of numbers < 10
+//   if (sec < 0) {
+//     sec = "59"
+//   };
+//   return sec;
+// }
                 // buttons.forEach(button => {
                 //   button.addEventListener('click', () => {
                 //     document.querySelector('.s.active').classList.remove('active');

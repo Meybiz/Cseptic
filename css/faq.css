@@ -50,6 +50,10 @@ flex-direction: column;
     
 }
 
+.faq-page {
+    font-size: 18px;
+}
+
 .faq-body p {
     color: black;
     font-weight: 700;
@@ -65,7 +69,7 @@ flex-direction: column;
     float: right;
     margin-left: 5px;
 }
-.active:after {
+.actives:after {
     content: "\2796";
     /* Unicode character for "minus" sign (-) */
 }
