@@ -15,12 +15,12 @@ body, html
     margin: 0 auto
     
 header
-    max-width: 1240px
+    max-width: 1140px
     margin: 0 auto
     // border: 2px solid red
 .one-div
     background: url(/img/back.png) center / cover
-    height: 990px
+    min-height: 990px
     position: relative
 
 .header-foo
@@ -77,7 +77,7 @@ header
 
 .header-foo__logo img
     width: 120px
-    height: 120px
+    // height: 120px
     margin: 5px
     position: absolute
     left: 3%
@@ -362,23 +362,26 @@ header
 
 .third-div-content
     width: 100%
-    padding-top: 200px
+    padding-top: 10%
     display: flex
     flex-direction: row
+    position: relative
 
 .third-div-content__day
-    position: relative
-    width: 55%
+    position: absolute
+    width: 46%
+    right: 2%
 
 .third-div-content__dayone
     position: absolute
     width: 100%
-    font-size: 30px
+    font-size: 26px
     text-transform: uppercase
     text-align: center
     font-weight: 700
     background-color: aliceblue
     z-index: 5
+    right:5%
     box-shadow: 0px 0px 15px #ffffff
 
 .third-div-content__dayone p
@@ -389,10 +392,11 @@ header
     position: absolute
     z-index: 6
     background: rgb(26, 196, 0)
-    font-size: 28px
+    font-size: 26px
     text-transform: uppercase
     font-weight: 700
-    left: 410px
+    // left: 410px
+    right: 10%
     top: 60px
     box-shadow: 1px 3px 10px #050505
 
@@ -404,9 +408,11 @@ header
     background: #ffce54
     color: black
     padding: 15px 30px
+    font-weight: 700
+    width: 90%
 
 .third-div-content__btn
-    width: 75%
+    width: 100%
 
 @-webkit-keyframes pulse-grow-on-hover 
     to 
@@ -440,7 +446,7 @@ header
 
 
 .second-div-bioseptik
-    height: 35vmax
+    height: 670px
     display: flex
     flex-direction: row
     flex-wrap: nowrap
@@ -452,7 +458,7 @@ header
     width: 55%
     box-shadow: 0px 0px 10px black
 
-.second-div-bioseptik__left p, .btn, h5
+.second-div-bioseptik__left p, .btn, .work-septik-left__name h5
     color: black
 
 .second-div-bioseptik__left p
@@ -698,7 +704,7 @@ header
 
 .work-septik-left__item
     width: 50%
-    height: 600px
+    height: 550px
     margin-bottom: 40px
     font-size: 18px
     line-height: 24px
@@ -866,6 +872,7 @@ header
 .ff p, .ff a, .ff li p > strong
     color: aliceblue
     font-size: 13px
+
 
 // .modalbtn
 //     width: 70px
@@ -1215,14 +1222,17 @@ header
 .modal-form p
     color: black
 
-
-
+.answ
+    font-size: 12px
+    width: 60%
+    text-align: center
 
 @keyframes ani
     0%
         transform: translate(150%)
     100%
         transform: translate(0)
+    
 
 
 

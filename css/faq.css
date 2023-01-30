@@ -73,3 +73,246 @@ flex-direction: column;
     content: "\2796";
     /* Unicode character for "minus" sign (-) */
 }
+
+
+@media (max-width: 1500px) {
+    header {
+        max-width: 900px;
+    }
+    .header-foo__logo img {
+        width: 80px;
+    }
+    .header-foo__address, .header-foo__btn, .header-foo__phone, .header-foo__time {
+        font-size: 12px;
+    }
+    .one-div-content__default > h1 {
+        font-size: 36px;
+    }
+    .one-div-content__default > p {
+        font-size: 20px;
+        padding-top: 20px;
+    }
+
+    .second-div-content__company strong {
+        font-size: 30px;
+    }
+    .second-div-content__company p {
+        font-size: 18px;
+    }
+
+    .third-div-content__dayone {
+        font-size: 18px;
+    }
+    .third-div-content__daytwo {
+        font-size: 18px;
+        top: 40px
+    }
+    .div2 {
+        width: 55%;
+    }
+    .lf-img img {
+        width: 400px;
+    }
+    .work-septik-left__two img {
+        width: 290px;
+        height: 230px
+    }
+    .work-septik-left__number span {
+        font-size: 30px;
+    }
+    .work-septik-left__number {
+        font-size: 16px;
+    }
+
+    .work-septik-right-form__img img {
+        width: 150px;
+    }
+    #form-quest {
+        font-size: 22px;
+    }
+    .work-septik-right-form__content p {
+        font-size: 16px;
+    }
+    .work-septik-right-form__content input {
+        height: 30px;
+        font-size: 16px;
+    }
+    .work-septik-right-form__btn {
+        font-size: 16px;
+        width: 70%;
+    }
+    .faq-heading {
+        font-size: 22px;
+    }
+    .pulse-button {
+        width: 60px;
+        height: 60px;
+    }
+    .pulse-button__icon {
+        width: 30px;
+        height: 30px
+    }
+}
+
+@media (max-width: 1366px) {
+    .lf-img img {
+        width: 300px;
+    }
+
+    .second-div-bioseptik__left p {
+        font-size: 16px;
+    }
+    
+    .second-div-bioseptik-right__text p {
+        font-size: 16px;
+    }
+    #septic{
+        font-size: 22px;
+    }
+    .one-div-content__default > h1 {
+        font-size: 30px;
+    }
+    .one-div-content__default > p {
+        font-size: 18px;
+    }
+    .header-foo__btn {
+        display: none;
+    }
+    header {
+        max-width: 800px;
+    }
+    .second-div-content {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    .second-div-content__company strong {
+        font-size: 26px;
+        text-align: center;
+    }
+    .second-div-content__company p {
+        font-size: 14px;
+        text-align: center;
+    }
+    .child {
+        height: 600px;
+    }
+    .one-div {
+        min-height: 800px;
+    }
+    .second-div-content__company strong::after {
+        right: 14.8%;
+    }
+    .work-septik-left__ul {
+        flex-direction: column;
+    }
+    .work-septik-left__item {
+        flex-direction: row;
+        width: 100%;
+        height: 250px;
+    }
+    .work-septik-left__number {
+        padding-left: 30px;
+    }
+    .work-septik-right-form__btn {
+        font-size: 14px;
+        width: 90%;
+    }
+    #form-quest {
+        font-size: 20px;
+        padding-left: 50px;
+    }
+    .work-septik-right-form__content p {
+        width: 90%;
+    }
+    .ff a, .ff li p > strong, .ff p {
+        font-size: 10px;
+    }
+    .faq-page {
+        font-size: 13px;
+      }
+}
+
+@media (max-width: 768px) {
+    .header-foo {
+        justify-content: flex-end;
+    }
+    .second-div-content__company p strong {
+        text-shadow: 0px 0px 1px black;
+    }
+    .second-div-content__company strong::after {
+        right: 13.8%;
+    }
+    .third-div-content__dayone {
+        font-size: 13px;
+    }
+    .third-div-content__daytwo p {
+        padding: 5px;
+        font-size: 14px;
+    }
+    .icons-div {
+        width: 70px;
+        height: 70px;
+    }
+    .icons-div img {
+        width: 50px;
+    }
+    .icons-div p {
+        font-size: 13px;
+    }
+    .second-div-bioseptik-right__text p {
+        font-size: 13px;
+    }
+    .second-div-bioseptik__left button {
+        font-size: 13px;
+    }
+    .second-div-bioseptik__left p {
+        font-size: 13px;
+    }
+    .lf-img img {
+        width: 250px;
+    }
+    .work-septik {
+        flex-direction: column;
+    }
+    .work-septik-left {
+        width: 90%;
+    }
+    .work-septik-left__content {
+        flex-direction: column;
+    }
+    .work-septik-left__ul {
+        flex-direction: row;
+    }
+    .work-septik-left__item {
+        flex-direction: column;
+        width: 40%;
+        height: 450px;
+        /* justify-content: space-between */
+    }
+    .work-septik-left__number {
+        width: 100%;
+        padding-left: 0;
+    }
+    .work-septik-left__name {
+        margin-bottom: 40px;
+    }
+    .work-septik-right {
+        padding-top: 50px;
+        width: 100%;
+    }
+    .work-septik-right-form__btn {
+        margin: 20px;
+        width: 60%;
+    }
+    .work-septik-right-form__content p {
+        font-size: 14px;
+    }
+    .faq-body p {
+        font-size: 14px;
+    }
+
+    .ff a, .ff li p > strong, .ff p {
+        font-size: 8px;
+    }
+}
