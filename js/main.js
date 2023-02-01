@@ -161,6 +161,27 @@ async function handleSubmit(event) {
     });
 }
 form.addEventListener("submit", handleSubmit)
+
+const slides = document.querySelectorAll('.slide');
+let index = 0;
+
+function showSlides() {
+  slides.forEach(slide => {
+    slide.style.display = 'none';
+  });
+
+  slides[index].style.display = 'flex';
+  index++;
+
+  if (index === slides.length) {
+    index = 0;
+  }
+
+  setTimeout(showSlides, 3000);
+}
+
+showSlides();
+
 // let one = document.querySelector('.popup')
 // const timer = document.querySelector('.popup-conten');
 // timer.classList.add('popup-content')
