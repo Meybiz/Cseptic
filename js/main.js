@@ -115,9 +115,13 @@ closeButton.addEventListener('click', function () {
 
 let modal = document.querySelector('.modal-form');
 let mdBtn = document.getElementById('zakaz');
+let mdBtn2 = document.getElementById('yellow-btn');
 // let span = document.querySelector('.close');
 
 mdBtn.onclick = function () {
+    modal.style.display = "block";
+}
+mdBtn2.onclick = function () {
     modal.style.display = "block";
 }
 
@@ -162,25 +166,92 @@ async function handleSubmit(event) {
 }
 form.addEventListener("submit", handleSubmit)
 
-const slides = document.querySelectorAll('.slide');
-let index = 0;
 
-function showSlides() {
-  slides.forEach(slide => {
-    slide.style.display = 'none';
-  });
 
-  slides[index].style.display = 'flex';
-  index++;
 
-  if (index === slides.length) {
-    index = 0;
-  }
+var timer = 4000;
 
-  setTimeout(showSlides, 3000);
-}
+var i = 0;
+var max = $('#cslide > li').length;
+ 
+	$("#cslide > li").eq(i).addClass('activ').css('left','0');
+	$("#cslide > li").eq(i + 1).addClass('activ').css('left','25%');
+	$("#cslide > li").eq(i + 2).addClass('activ').css('left','50%');
+	$("#cslide > li").eq(i + 3).addClass('activ').css('left','75%');
+ 
 
-showSlides();
+	setInterval(function(){ 
+
+		$("#cslide > li").removeClass('activ');
+
+		$("#cslide > li").eq(i).css('transition-delay','0.25s');
+		$("#cslide > li").eq(i + 1).css('transition-delay','0.5s');
+		$("#cslide > li").eq(i + 2).css('transition-delay','0.75s');
+		$("#cslide > li").eq(i + 3).css('transition-delay','1s');
+
+		if (i < max-4) {
+			i = i+4; 
+		} 
+		else { 
+			i = 0; 
+		}  
+
+		$("#cslide > li").eq(i).css('left','0').addClass('activ').css('transition-delay','1.25s');
+		$("#cslide > li").eq(i + 1).css('left','25%').addClass('activ').css('transition-delay','1.5s');
+		$("#cslide > li").eq(i + 2).css('left','50%').addClass('activ').css('transition-delay','1.75s');
+		$("#cslide > li").eq(i + 3).css('left','75%').addClass('activ').css('transition-delay','2s');
+	
+	}, timer);
+ 
+    const btnUp = {
+        el: document.querySelector('.btn-up'),
+        show() {
+          // удалим у кнопки класс btn-up_hide
+          this.el.classList.remove('btn-up_hide');
+        },
+        hide() {
+          // добавим к кнопке класс btn-up_hide
+          this.el.classList.add('btn-up_hide');
+        },
+        addEventListener() {
+          // при прокрутке содержимого страницы
+          window.addEventListener('scroll', () => {
+            // определяем величину прокрутки
+            const scrollY = window.scrollY || document.documentElement.scrollTop;
+            // если страница прокручена больше чем на 400px, то делаем кнопку видимой, иначе скрываем
+            scrollY > 400 ? this.show() : this.hide();
+          });
+          // при нажатии на кнопку .btn-up
+          document.querySelector('.btn-up').onclick = () => {
+            // переместим в начало страницы
+            window.scrollTo({
+              top: 0,
+              left: 0,
+              behavior: 'smooth'
+            });
+          }
+        }
+      }
+      btnUp.addEventListener();
+// const slides = document.querySelectorAll('.slide');
+// let index = 0;
+
+// function showSlides() {
+//   slides.forEach(slide => {
+//     slide.style.display = 'none';
+//   });
+
+//   slides[index].style.display = 'flex';
+//   index++;
+
+//   if (index === slides.length) {
+//     index = 0;
+//   }
+
+//   setTimeout(showSlides, 3000);
+// }
+
+// showSlides();
 
 // let one = document.querySelector('.popup')
 // const timer = document.querySelector('.popup-conten');
