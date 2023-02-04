@@ -61,6 +61,10 @@ flex-direction: column;
     font-size: 18px;
     padding: 20px;
 }
+.faq-body p a {
+    color: black;
+    text-decoration: none;
+}
 .faq-page:after {
     content: '\02795';
     font-size: 13px;
@@ -116,7 +120,7 @@ flex-direction: column;
 }
 
 .slideshow {
-    width: 60%;
+    width: 70%;
     height: 300px;
     position: relative;
     overflow: hidden;
@@ -185,6 +189,14 @@ flex-direction: column;
 
   .btn-up_hide {
     display: none;
+  }
+  .foo-li-two {
+    display: none;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 6px;
+    text-align: center;
+    padding-top: 10px;
   }
 
   @media (hover: hover) and (pointer: fine) {
@@ -372,7 +384,13 @@ flex-direction: column;
         min-height: 800px;
     }
     .second-div-content__company strong::after {
-        right: 14.8%;
+        left: 17.8%;
+    }
+    .second-div-content__company.last strong::after {
+        left: 66%;
+    }
+    .second-div-content__company.prelast strong::after {
+        left: 67%;
     }
     .work-septik-left__ul {
         flex-direction: column;
@@ -486,6 +504,58 @@ flex-direction: column;
     .ff a, .ff li p > strong, .ff p {
         font-size: 8px;
     }
+    .foo-li-two {
+        display: block;
+    }
+
+    .foo-li-one {
+        display: none;
+    }
+    .btn-up {
+        bottom: 9%;
+        width: 40px;
+        height: 40px;
+    }
+    .pulse-button {
+        width: 50px;
+        height: 50px;
+    }
+    .pulse-button__icon {
+        width: 25px;
+        height: 25px;
+    }
+    .popup {
+        width: 300px;
+    }
+    .modal-div img {
+        width: 130px;
+    }
+    .popup-content h5 {
+        font-size: 14px;
+        text-align: center;
+    }
+    .popup-content input {
+        font-size: 12px;
+        height: 40px;
+    }
+    .popup-content .modal-div button {
+        width: 150px;
+        margin-left: 0px;
+    }
+    .closeBtn {
+        font-size: 10px;
+    }
+    .modal-form .modal-div h5 {
+        font-size: 12px;
+    }
+    .modal-form .popup-content {
+        padding: 0;
+        width: 100%;
+        height: 75%;
+    }
+    .popup-content .modal-div button.foo-btn {
+        margin-left: 30px;
+    }
 }
 
 @media (max-width: 575px) {
@@ -552,12 +622,14 @@ flex-direction: column;
         /* margin: 0 auto; */
         width: 100%;
     }
-    .third-div-content__btn a {
+    .third-div-content__btn button {
         margin-left: 15px;
         font-size: 12px;
+        width: 90%;
     }
     .third-div-content__dayone p {
         font-size: 12px;
+        padding-left: 10%;
     }
     .second-div-bioseptik {
         flex-direction: column;
@@ -578,7 +650,7 @@ flex-direction: column;
         width: 95px;
     }
     .second-div-bioseptik {
-        height: 150vh;
+        height: 190vh;
     }
     .second-div-bioseptik__right {
         box-shadow: 0px 0px 0px;
@@ -631,13 +703,13 @@ flex-direction: column;
         font-size: 6px;
     }
     .foo {
-        width: 35%;
+        width: 50%;
     }
     .foo-text {
         font-size: 8px;
     }
     .foo-two {
-        width: 33%;
+        width: 50%;
     }
     .foo-li-one {
         text-align: center;
